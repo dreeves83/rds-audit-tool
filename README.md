@@ -2,7 +2,7 @@
 
 Python utility for auditing AWS RDS environments across multiple accounts and regions. Produces a structured XLSX report tracking instance storage allocation, snapshot health, and estimated cost savings from right-sizing over-provisioned instances. Works entirely through read-only API calls using temporary credentials.
 
-![RDS Audit Summary](images/screenshot-summary.png)
+![RDS Audit Summary](Images/screenshot-summary.png)
 
 ---
 
@@ -21,7 +21,7 @@ Several recurring concerns motivated this tool:
 
 ## RDS Instances
 
-![RDS Instance Tab](images/screenshot-instances.png)
+![RDS Instance Tab](Images/screenshot-instances.png)
 
 | Data Point | Why It Matters |
 |---|---|
@@ -38,7 +38,7 @@ Instances are flagged based on storage utilization. Flagging applies only to ins
 
 ## Manual Snapshots
 
-![Manual Snapshots Tab](images/screenshot-snapshots.png)
+![Manual Snapshots Tab](Images/screenshot-snapshots.png)
 
 | Data Point | Why It Matters |
 |---|---|
@@ -53,7 +53,7 @@ Snapshot status logic:
 
 ## Orphaned Snapshots
 
-![Orphaned Snapshots Tab](images/screenshot-orphans.png)
+![Orphaned Snapshots Tab](Images/screenshot-orphans.png)
 
 Snapshots where no living RDS instance can be matched by environment prefix (e.g. `prod-XX-`, `qa-XX-`, `uat-XX-`). These are typically artifacts from decommissioned instances. All orphaned snapshots are flagged for review regardless of age.
 
